@@ -1,6 +1,4 @@
-import edu.princeton.cs.algs4.Bag;
-import edu.princeton.cs.algs4.Digraph;
-import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -138,4 +136,10 @@ public final class WordNet {
         return vertices.get(s.ancestor(instances.get(nounA), instances.get(nounB)));
     }
 
+
+    public static void main(String[] args) {
+        String synset = args[0];
+        String hypernym = args[1];
+        WordNet wordnet = new WordNet(synset, hypernym);
+    }
 }
